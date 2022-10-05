@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../Component/Navbar";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import OwlCarousel from 'react-owl-carousel';  
+import 'owl.carousel/dist/assets/owl.carousel.css';  
+import 'owl.carousel/dist/assets/owl.theme.default.css'; 
 import Product from '../../Component/Product';
 
 export default class index extends Component {
@@ -25,14 +25,6 @@ export default class index extends Component {
     });
   }
   render() {
-    const settings = {
-      className: "center",
-      centerMode: true,
-      infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 3,
-      speed: 500,
-    };
     return (
       <div className="bg-white">
         <Navbar />
@@ -235,50 +227,48 @@ export default class index extends Component {
 
         {/* slider */}
         <div className=" w-2/4 ml-10">
-          <Slider {...settings}>
-            <div>
-              <img
+
+        <OwlCarousel items={3}  
+          className="owl-theme"  
+          loop  
+          nav  
+          margin={8} >  
+           <div ><img
                 alt="ecommerce"
                 class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src="https://ik.imagekit.io/o93orda5ze/image_61_uJsjntw8X.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664911120618"
-              />
-            </div>
-            <div>
-              <img
+              /></div>  
+           <div><img
                 alt="ecommerce"
                 class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src="https://ik.imagekit.io/o93orda5ze/image_61_uJsjntw8X.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664911120618"
-              />
-            </div>
-            <div>
-              <img
+              /></div>  
+           <div><img
                 alt="ecommerce"
                 class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src="https://ik.imagekit.io/o93orda5ze/image_61_uJsjntw8X.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664911120618"
-              />
-            </div>
-            <div>
-              <img
+              /></div>  
+           <div><img
                 alt="ecommerce"
                 class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src="https://ik.imagekit.io/o93orda5ze/image_61_uJsjntw8X.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664911120618"
-              />
-            </div>
-            <div>
-              <img
+              /></div>  
+           <div><img
                 alt="ecommerce"
                 class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src="https://ik.imagekit.io/o93orda5ze/image_61_uJsjntw8X.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664911120618"
-              />
-            </div>
-            <div>
-              <img
+              /></div>  
+           <div><img
                 alt="ecommerce"
                 class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src="https://ik.imagekit.io/o93orda5ze/image_61_uJsjntw8X.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664911120618"
-              />
-            </div>
-          </Slider>
+              /></div>  
+           <div><img
+                alt="ecommerce"
+                class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+                src="https://ik.imagekit.io/o93orda5ze/image_61_uJsjntw8X.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664911120618"
+              /></div>  
+      </OwlCarousel>  
         </div>
         {/*  */}
 
